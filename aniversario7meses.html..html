@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💖 Feliz Aniversario Mi Niña 7 Meses, Vamos Por Mas💖</title>
+
+<!-- Fuente cursiva romántica -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #030014 0%, #0a0024 100%);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  perspective: 800px;
+  touch-action: manipulation;
+}
+
+/* 💖 Título principal */
+h1 {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.8em, 5vw, 3.8em);
+  font-weight: 400;
+  color: #ffe79a; /* 🌟 Dorado suave */
+  text-shadow: 
+    0 0 15px #ffecb3, 
+    0 0 40px #ffd966, 
+    0 0 80px #ffc107;
+  animation: floatGlow 6s ease-in-out infinite;
+  z-index: 10;
+}
+/* ✨ Movimiento lateral + brillo suave */
+@keyframes floatGlow {
+  0% { transform: translateX(0) translateY(0) scale(1); }
+  25% { transform: translateX(-15px) translateY(-5px) scale(1.05); }
+  50% { transform: translateX(15px) translateY(5px) scale(1.1); }
+  75% { transform: translateX(-15px) translateY(-5px) scale(1.05); }
+  100% { transform: translateX(0) translateY(0) scale(1); }
+}
+
+/* Frases flotantes */
+.phrase {
+  position: absolute;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(0.6em, 2vw, 1.1em);
+  color: #ffd8f9;
+  text-shadow: 0 0 8px #ff66cc;
+  animation: floatText 8s ease-in-out infinite;
+  white-space: nowrap;
+  z-index: 3;
+}
+@keyframes floatText {
+  0% { transform: translate3d(0,0,0) rotate(0deg); opacity: 1; }
+  50% { transform: translate3d(25px, -30px, 50px) rotate(10deg); opacity: 0.9; }
+  100% { transform: translate3d(-25px, 30px, -50px) rotate(-10deg); opacity: 1; }
+}
+
+/* Estrellas */
+.star {
+  position: absolute;
+  width: 2px; height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: twinkle 3s infinite ease-in-out;
+  z-index: 1;
+}
+@keyframes twinkle {
+  0%,100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* Fotos y videos */
+.float-media {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 182, 239, 0.6);
+  object-fit: cover;
+  animation: orbitFloat 30s linear infinite;
+  z-index: 4;
+}
+@keyframes orbitFloat {
+  from { transform: rotateY(0deg) rotateX(10deg) translateZ(250px) rotate(0deg); }
+  to { transform: rotateY(360deg) rotateX(10deg) translateZ(250px) rotate(360deg); }
+}
+
+/* Botón música */
+button {
+  position: fixed;
+  bottom: 15px; right: 15px;
+  padding: 8px 12px;
+  font-size: clamp(0.7em, 2.5vw, 0.9em);
+  background: #ff6b9e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255,107,158,0.4);
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 15;
+}
+button:hover { background: #ff4f8f; transform: scale(1.05); }
+
+/* Sorpresa */
+.surprise {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.9);
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s;
+  z-index: 20;
+}
+.surprise.show {
+  opacity: 1;
+  pointer-events: all;
+}
+.surprise h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.2em, 5vw, 2.5em);
+  text-align: center;
+  text-shadow: 0 0 30px #ff8ad4, 0 0 80px #ff40b0;
+  color: #ffb6f9;
+}
+.surprise p {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.8em, 3vw, 1.2em);
+  margin-top: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="title">💖 Feliz Aniversario — 7 Meses de un Amor Infinito 💖</h1>
+
+<!-- Fotos -->
+<img src="foto1.jpg" class="float-media" style="width:100px; height:100px; top:10%; left:10%;">
+<img src="foto2.jpg" class="float-media" style="width:100px; height:100px; top:15%; right:10%;">
+<img src="foto3.jpg" class="float-media" style="width:100px; height:100px; bottom:20%; left:15%;">
+<img src="foto4.jpg" class="float-media" style="width:100px; height:100px; bottom:15%; right:15%;">
+
+<!-- Videos -->
+<video src="video1.mp4" class="float-media" style="width:120px; height:80px; top:30%; left:25%;" autoplay muted loop playsinline></video>
+<video src="video2.mp4" class="float-media" style="width:120px; height:80px; bottom:25%; left:45%;" autoplay muted loop playsinline></video>
+<video src="video3.mp4" class="float-media" style="width:120px; height:80px; top:40%; right:25%;" autoplay muted loop playsinline></video>
+
+<!-- Música -->
+<audio id="bgMusic" loop>
+  <source src="ojos_de_amor.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn">🎵 Reproducir música</button>
+
+<!-- Sorpresa -->
+<div class="surprise" id="surprise">
+  <h2>💞 Gracias por estos 7 meses maravillosos 💞</h2>
+  <p>Eres mi razón, mi paz y mi universo ✨</p>
+</div>
+
+<script>
+// 🌟 Estrellas
+for(let i=0;i<120;i++){
+  const s=document.createElement('div');
+  s.className='star';
+  s.style.top=Math.random()*100+'%';
+  s.style.left=Math.random()*100+'%';
+  s.style.animationDelay=(Math.random()*4)+'s';
+  document.body.appendChild(s);
+}
+
+// 💫 Frases flotando
+const frases=[
+  "Eres mi universo y mi sol 🌞",
+  "Contigo aprendí lo que es amar 💕",
+  "Tu sonrisa ilumina mis días 🌸",
+  "Cada momento contigo es un regalo 🎁",
+  "Siete meses y mi amor sigue creciendo 💖",
+  "Eres la melodía más dulce 🎶",
+  "Mi corazón late por ti ❤️",
+  "Gracias por existir 🌹",
+  "Tu voz calma mi alma 🌙",
+  "Eres mi sueño hecho realidad 🌟",
+  "Nada se compara a tu amor 💫",
+  "Mi vida es más bonita contigo 🌈",
+  "Nuestro amor es infinito ♾️",
+  "Eres mi razón de sonreír ☀️",
+  "Te amo más allá de las estrellas 💫"
+];
+frases.forEach(t=>{
+  const el=document.createElement('div');
+  el.className='phrase';
+  el.textContent=t;
+  el.style.top=Math.random()*90+'%';
+  el.style.left=Math.random()*90+'%';
+  el.style.animationDelay=(Math.random()*5)+'s';
+  document.body.appendChild(el);
+});
+
+// 🎵 Música
+const btn=document.getElementById('musicBtn');
+const music=document.getElementById('bgMusic');
+btn.onclick=()=>{
+  if(music.paused){
+    music.play();
+    btn.textContent='⏸️ Pausar música';
+  } else {
+    music.pause();
+    btn.textContent='🎵 Reproducir música';
+  }
+};
+
+// 💞 Sorpresa al tocar el título
+const title=document.getElementById('title');
+const surprise=document.getElementById('surprise');
+title.onclick=()=>{
+  surprise.classList.add('show');
+  setTimeout(()=>surprise.classList.remove('show'),5000);
+};
+</script>
+
+</body>
+</html>
